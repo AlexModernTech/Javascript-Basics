@@ -12,3 +12,39 @@ function check() {
     alert(isAdult);
 
 }
+
+function age_checker() {
+    let age_val = prompt("How old are you?", '');
+    if (age_val >= 14 && age_val <= 90) {
+        alert("You are old enough :)");
+    }
+    if (age_val < 14 || age_val > 90) {
+        alert("Come back next time :)");
+    }
+}
+
+function login() {
+    let user = prompt("Who are you?", '');
+
+    if (user == "Admin" || user == "admin") {
+        let passw = prompt("Enter your password:", '')
+
+        if (passw == "TheMaster") {
+            alert("Welcome, Admin");
+        }
+        else if (passw == null || passw == '') {
+            alert("Canceled");
+        }
+        else {
+            alert("Wrong password");
+        }
+    }
+
+    else if (user == null || user == '') {
+        alert("Canceled");
+    }
+
+    else {
+        alert("I don't know you");
+    }
+}
