@@ -34,3 +34,55 @@ function do_while_loop() {
     while (numb_of_times > 0);
     console.log(sum);
 }
+
+function even_numbers() {
+    for (let i = 0; i <= 10; i++) {
+        if (i % 2 == 0) {
+            console.log(i)
+        }
+        else{
+            console.log("Not even...")
+        }
+    }
+}
+
+function from_for_to_while() {
+    for (let i = 0; i < 3; i++) {
+        console.log( `число ${i}!` );
+      }
+
+    let i = 0;
+    while (i < 3) {
+        console.log(`число ${i}!`);
+        i++;
+    }
+}
+
+function until_correct() {
+        
+   loop_breakout : while(true){
+            let value = prompt("Choose a number bigger then 100");
+            if (Number(value) <= 100) {
+                continue;
+            }
+            else {
+                console.log(value);
+                break loop_breakout;
+            }
+        }
+}
+
+function simple_numbers() {
+    let n = 10;
+
+    nextPrime:
+        for (let i = 2; i <= n; i++) { // для кожного i...
+
+        for (let j = 2; j < i; j++) { // шукаємо дільник..
+            if (i % j == 0) continue nextPrime; // не просте, беремо наступне i
+        }
+
+        alert( i ); // просте число
+        }
+
+}
