@@ -48,3 +48,12 @@ function login() {
         alert("I don't know you");
     }
 }
+
+function loop_example() {
+    let value = prompt("Choose a value for the loop:", '');
+    
+    while (value) {
+        document.getElementById("text_loop").innerHTML = `You wrote a number, but anyway it will be ${value} because it's loop without time spacing`;
+        value--;
+    }
+}
